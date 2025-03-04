@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.sqlite
+*.env*
+!.env.example
+
+
+/client/node_modules/
+/client/dist/
+/client/.env*
+/client/coverage/
+/client/.cache/
+
