@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Цвета */
+  --color-primary-bg: #f5f0e1;
+  --color-secondary-bg: #fff8f0;
+  --color-accent: #d4af37;
+  --color-accent-hover: #c09a2f;
+  --color-text-primary: #5a472b;
+  --color-completed-step: #8b5a2b;
+  --color-incomplete-step: #a0a0a0;
+}
+
+body {
+  margin: 0; /* Убираем отступы по умолчанию */
+  font-family: Arial, sans-serif; /* Задаем шрифт */
+  color: #5a472b; /* Темно-коричневый текст */
+  min-height: 100vh; /* Фон занимает всю высоту страницы */
+
+  /* Добавляем текстуру */
+  background-image: linear-gradient(
+      rgba(245, 240, 225, 0.9),
+      /* Полупрозрачный бежевый слой */ rgba(245, 240, 225, 0.9)
+    ),
+    url("/public/assets/wooden-floor-background.jpg"); /* Путь к изображению текстуры */
+  background-size: cover; /* Растягиваем текстуру на весь экран */
+  background-position: center; /* Центрируем текстуру */
+  background-repeat: no-repeat; /* Отключаем повторение текстуры */
+}

@@ -1,0 +1,59 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "resources": [
+    {
+      "_type": "request",
+      "_id": "req_camp_night_guards",
+      "name": "Get Night Guards",
+      "method": "GET",
+      "url": "http://localhost:8000/api/camp/night-guards"
+    },
+    {
+      "_type": "request",
+      "_id": "req_camp_exits_sept7",
+      "name": "Get Sept 7 Exits",
+      "method": "GET", 
+      "url": "http://localhost:8000/api/camp/exits-sept7"
+    },
+    {
+      "_type": "request",
+      "_id": "req_camp_add_log",
+      "name": "Add Camp Log (POST)",
+      "method": "POST",
+      "url": "http://localhost:8000/api/camp/add-log",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"guard_name\": \"Иван Грозный\",\n  \"date\": \"1380-09-08\",\n  \"shift\": \"night\",\n  \"action\": \"patrol\",\n  \"time\": \"22:00:00\",\n  \"notes\": \"Обход лагеря\"\n}"
+      }
+    },
+    {
+      "_type": "request",
+      "_id": "req_finances_large",
+      "name": "Large Transactions",
+      "method": "GET",
+      "url": "http://localhost:8000/api/finances/large-transactions"
+    },
+    {
+      "_type": "request", 
+      "_id": "req_finances_conspirators",
+      "name": "Find Conspirators",
+      "method": "GET",
+      "url": "http://localhost:8000/api/finances/conspirators"
+    },
+    {
+      "_type": "request",
+      "_id": "req_movement_river",
+      "name": "River Movements",
+      "method": "GET",
+      "url": "http://localhost:8000/api/movement/river-movements"
+    },
+    {
+      "_type": "request",
+      "_id": "req_negotiations_suspicious",
+      "name": "Suspicious Negotiations", 
+      "method": "GET",
+      "url": "http://localhost:8000/api/negotiations/suspicious-negotiations"
+    }
+  ]
+}
