@@ -80,3 +80,12 @@ def find_suspicious_negotiations(db: Session):
             "amount": r.amount
         } for r in results
     ]
+
+def get_all_data(db: Session):
+    result = {
+        "camp_logs": db.query(models.CampLog).all(),
+        "finances": db.query(models.Finances).all(),
+        "movement_records": db.query(models.MovementRecord).all(),
+        "secret_negotiations": db.query(models.SecretNegotiations).all()
+    }
+    return result

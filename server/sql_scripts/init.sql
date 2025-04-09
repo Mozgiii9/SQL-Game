@@ -1,3 +1,4 @@
+-- Таблица camp_logs
 CREATE TABLE camp_logs (
     log_id SERIAL PRIMARY KEY,  -- Changed to SERIAL for auto-increment
     guard_name VARCHAR(50) NOT NULL,
