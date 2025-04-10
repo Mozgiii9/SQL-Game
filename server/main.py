@@ -26,6 +26,24 @@ models.Base.metadata.create_all(bind=engine)
 def get_model_tables():
     return [cls.__tablename__ for cls in models.Base.__subclasses__()]
 
+@app.get("/case/{case_id}/data")
+def get_case_data(case_id: str):
+    with Session(engine) as session:
+        if case_id in ['case-001', 'case-002']:
+            return {
+                "table_name": "camp_logs",
+                "title": "Журнал патрулирования (camp_logs)",
+                "data": [log.__dict__ for log in session.query(models.CampLog).all()]
+            }
+        elif case_id == 'case-003':
+            return {
+                "table_name": "finances",
+                "title": "Финансовые операции (finances)",
+                "data": [finance.__dict__ for finance in session.query(models.Finances).all()]
+            }
+        else:
+            raise HTTPException(status_code=404, detail="Кейс не найден")
+
 @app.get("/all-data")
 def get_all_data():
     with Session(engine) as session:
